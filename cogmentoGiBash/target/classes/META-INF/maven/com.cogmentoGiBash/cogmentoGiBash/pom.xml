@@ -45,9 +45,24 @@
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-testng</artifactId>
+			<artifactId>cucumber-junit</artifactId>
 			<version>6.1.1</version>
 		</dependency>
 
 	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.3.1</version>
+		<configuration>
+		<includes>
+			<include>../RunnerTest.java</include>
+		</includes>
+		</configuration>
+		</plugin>
+		</plugins>
+	</build>
 </project>
